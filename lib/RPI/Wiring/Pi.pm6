@@ -3,9 +3,7 @@ use v6;
 unit module RPI::Wiring::Pi;
 
 use strict;
-use warnings;
 use NativeCall;
-use Carp qw(carp croak verbose);
 
 constant LIB = 'libwiringPi.so.2.25';
 
