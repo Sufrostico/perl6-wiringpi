@@ -66,7 +66,8 @@ sub  wiringPiSetupSys() returns int32 is native(LIB) is export {*};
   This function has no effect when in Sys mode. If you need to change the pin
   mode, then you can do it with the gpio program in a script before you start your
   program.]
-sub pinMode (int32 pin, int32 mode) returns int32 is native(LIB) is export {*};
+  #sub pinMode (int32 pin, int32 mode) returns int32 is native(LIB) is export {*};
+sub pinMode (int32 , int32 ) returns int32 is native(LIB) is export {*};
 
 
 #`[ This sets the pull-up or pull-down resistor mode on the given pin, which should
@@ -78,14 +79,16 @@ sub pinMode (int32 pin, int32 mode) returns int32 is native(LIB) is export {*};
   This function has no effect on the Raspberry Pi’s GPIO pins when in Sys mode. If
   you need to activate a pull-up/pull-down, then you can do it with the gpio
   program in a script before you start your program.]
-sub  pullUpDnControl (int32 pin, int32 pud) is native(LIB) is export {*};
+  #sub  pullUpDnControl (int32 , int32 ) is native(LIB) is export {*};
+sub  pullUpDnControl (int32 , int32 ) is native(LIB) is export {*};
 
 #`[ Writes the value HIGH or LOW (1 or 0) to the given pin which must have been
   previously set as an output.
   
   WiringPi treats any non-zero number as HIGH, however 0 is the only
   representation of LOW.]
-sub  digitalWrite (int32 pin, int32 value) is native(LIB) is export {*};
+  #sub  digitalWrite (int32 , int32 ) is native(LIB) is export {*};
+sub  digitalWrite (int32 , int32 ) is native(LIB) is export {*};
 
 
 #`[ Writes the value to the PWM register for the given pin. The Raspberry Pi has one
@@ -93,25 +96,29 @@ sub  digitalWrite (int32 pin, int32 value) is native(LIB) is export {*};
   PWM devices may have other PWM ranges.
   
   This function is not able to control the Pi’s on-board PWM when in Sys mode.]
-sub  pwmWrite (int32 pin, int32 value) is native(LIB) is export {*};
+  #sub  pwmWrite (int32 pin, int32 value) is native(LIB) is export {*};
+sub  pwmWrite (int32 , int32 ) is native(LIB) is export {*};
 
 
 #`[ This function returns the value read at the given pin. It will be HIGH or LOW (1
   or 0) depending on the logic level at the pin.  ]
-sub digitalRead (int32 pin) returns int32 is native(LIB) is export {*};
+#sub digitalRead (int32 pin) returns int32 is native(LIB) is export {*};
+sub digitalRead (int32 ) returns int32 is native(LIB) is export {*};
 ;
 
 
 #`[ This returns the value read on the supplied analog input pin. You will need
   to register additional analog modules to enable this function for devices such
   as the Gertboard, quick2Wire analog board, etc. ]
-sub analogRead (int32 pin) returns int32 is native(LIB) is export {*};
+  #sub analogRead (int32 pin) returns int32 is native(LIB) is export {*};
+sub analogRead (int32 ) returns int32 is native(LIB) is export {*};
 ;
 
 #`[ This writes the given value to the supplied analog pin. You will need to
   register additional analog modules to enable this function for devices such as
   the Gertboard. ]
-sub analogWrite (int32 pin, int32 value) is native(LIB) is export {*};
+  #sub analogWrite (int32 pin, int32 value) is native(LIB) is export {*};
+sub analogWrite (int32 , int32 ) is native(LIB) is export {*};
 
 #`[ These functions are not part of the core wiringPi set, but act specifically on
     the Raspberry Pi hardware itself. Some external hardware driver modules may
@@ -119,22 +126,23 @@ sub analogWrite (int32 pin, int32 value) is native(LIB) is export {*};
 
 # Raspberry PI specifics -------------------------------------------------------
     
-sub pinMode (int32 pin, int32 mode) returns int32 is native(LIB) is export {*};
-
 #`[ This writes the 8-bit byte supplied to the first 8 GPIO pins. It’s the fastest
     way to set all 8 bits at once to a particular value, although it still takes two
     write operations to the Pi’s GPIO hardware.  ]
-sub  digitalWriteByte (int32 value) is native(LIB) is export {*};
+    #sub  digitalWriteByte (int32 value) is native(LIB) is export {*};
+sub  digitalWriteByte (int32 ) is native(LIB) is export {*};
 
 #`[ The PWM generator can run in 2 modes – “balanced” and “mark:space”. The
     mark:space mode is traditional, however the default mode in the Pi is
     “balanced”. You can switch modes by supplying the parameter: PWM_MODE_BAL or
     PWM_MODE_MS.  ]
-sub pwmSetMode (int32 mode) is native(LIB) is export {*};
+    #sub pwmSetMode (int32 mode) is native(LIB) is export {*};
+sub pwmSetMode (int32 ) is native(LIB) is export {*};
 
 
 #`[ This sets the range register in the PWM generator. The default is 1024.  ]
-sub pwmSetRange (uint32 range) is native(LIB) is export {*};
+#sub pwmSetRange (uint32 range) is native(LIB) is export {*};
+sub pwmSetRange (uint32 ) is native(LIB) is export {*};
 
 
 #`[ This sets the divisor for the PWM clock.
@@ -142,30 +150,35 @@ sub pwmSetRange (uint32 range) is native(LIB) is export {*};
     Note: The PWM control functions can not be used when in Sys mode. To understand
     more about the PWM system, you’ll need to read the Broadcom ARM peripherals
     manual.  ]
-sub pwmSetClock (int32 divisor) is native(LIB) is export {*};
+    #sub pwmSetClock (int32 divisor) is native(LIB) is export {*};
+sub pwmSetClock (int32 ) is native(LIB) is export {*};
 
 
 #`[ This returns the board revision of the Raspberry Pi. It will be either 1 or 2.
     Some of the BCM_GPIO pins changed number and function when moving from board
     revision 1 to 2, so if you are using BCM_GPIO pin numbers, then you need to be
     aware of the differences.  ]
-sub piBoardRev (void) returns int32 is native(LIB) is export {*};
+    #sub piBoardRev (void) returns int32 is native(LIB) is export {*};
+sub piBoardRev () returns int32 is native(LIB) is export {*};
 
 
 #`[ This returns the BCM_GPIO pin number of the supplied wiringPi pin. It takes the
     board revision into account.  ]
-sub wpiPinToGpio (int32 wPiPin) returns int32 is native(LIB) is export {*};
+    #sub wpiPinToGpio (int32 wPiPin) returns int32 is native(LIB) is export {*};
+sub wpiPinToGpio (int32 ) returns int32 is native(LIB) is export {*};
 
 
 #`[ This returns the BCM_GPIO pin number of the supplied physical pin on the P1
     connector.  ]
-sub physPinToGpio (int32 physPin) returns int32 is native(LIB) is export {*};
+    #sub physPinToGpio (int32 physPin) returns int32 is native(LIB) is export {*};
+sub physPinToGpio (int32 ) returns int32 is native(LIB) is export {*};
 
 
 #`[ This sets the “strength” of the pad drivers for a particular group of pins.
     There are 3 groups of pins and the drive strength is from 0 to 7. Do not use
     this unless you know what you are doing.  ]
-sub setPadDrive (int32 group, int32 value) is native(LIB) is export {*};
+    #sub setPadDrive (int32 group, int32 value) is native(LIB) is export {*};
+sub setPadDrive (int32 , int32 ) is native(LIB) is export {*};
 
 
 #`[ While Linux provides a multitude of system calls and functions to providing
@@ -193,7 +206,8 @@ sub micros () returns uint32 is native(LIB) is export {*};
 #`[ This causes program execution to pause for at least howLong milliseconds. Due to
     the multi-tasking nature of Linux it could be longer. Note that the maximum
     delay is an unsigned 32-bit integer or approximately 49 days.  ]
-sub delay (uint32 howLong) is native(LIB) is export {*};
+    #sub delay (uint32 howLong) is native(LIB) is export {*};
+sub delay (uint32 ) is native(LIB) is export {*};
 
 #`[ This causes program execution to pause for at least howLong microseconds. Due to
     the multi-tasking nature of Linux it could be longer. Note that the maximum
@@ -203,7 +217,8 @@ sub delay (uint32 howLong) is native(LIB) is export {*};
     polling the system time, Delays over 100 microseconds are done using the system
     nanosleep() function – You may need to consider the implications of very short
     delays on the overall performance of the system, especially if using threads.  ]
-sub delayMicroseconds (uint32 howLong) is native(LIB) is export {*};
+    #sub delayMicroseconds (uint32 howLong) is native(LIB) is export {*};
+sub delayMicroseconds (uint32 ) is native(LIB) is export {*};
 
 # Program or Thread Priority ---------------------------------------------------
 
@@ -230,7 +245,8 @@ sub delayMicroseconds (uint32 howLong) is native(LIB) is export {*};
 
     Note: Jan 2013: The waitForInterrupt() function is deprecated – you should use
     the newer and easier to use wiringPiISR() function below.  ]
-sub piHiPri (int32 priority) returns int32 is native(LIB) is export {*};
+    #sub piHiPri (int32 priority) returns int32 is native(LIB) is export {*};
+sub piHiPri (int32 ) returns int32 is native(LIB) is export {*};
 
 # Interrupts -------------------------------------------------------------------
 
@@ -251,7 +267,8 @@ sub piHiPri (int32 priority) returns int32 is native(LIB) is export {*};
     gpio edge 0 falling
 
     before running the program.  ]
-sub waitForInterrupt (int32 pin, int32 timeOut) returns int32 is native(LIB) is export {*};
+    #sub waitForInterrupt (int32 pin, int32 timeOut) returns int32 is native(LIB) is export {*};
+sub waitForInterrupt (int32 , int32 ) returns int32 is native(LIB) is export {*};
 
 
 #`[ This function registers a function to received interrupts on the specified pin.
@@ -288,7 +305,8 @@ sub waitForInterrupt (int32 pin, int32 timeOut) returns int32 is native(LIB) is 
     Using these functions you can create a new process (a function inside your main
     program) which runs concurrently with your main program and using the mutex
     mechanisms, safely pass variables between them.  ]
-sub wiringPiISR (int32 pin, int32 edgeType, &callback ) returns int32 is native(LIB) is export {*};
+    #sub wiringPiISR (int32 pin, int32 edgeType, &callback ) returns int32 is native(LIB) is export {*};
+sub wiringPiISR (int32 , int32 , &callback ) returns int32 is native(LIB) is export {*};
 
 # Concurrent Processing (multi-threading) --------------------------------------
 
@@ -317,8 +335,9 @@ sub wiringPiISR (int32 pin, int32 edgeType, &callback ) returns int32 is native(
     This is really nothing more than a simplified interface to the Posix threads
     mechanism that Linux supports. See the manual pages on Posix threads (man
     pthread) if you need more control over them.]
-    int piThreadCreate (name) ;
-sub piThreadCreate ( &callback(Pointer[void] --> Pointer[void]) ) is native(LIB) is export {*};
+ 
+    #int piThreadCreate (name) ;
+sub piThreadCreate ( &callback (Pointer[void] --> Pointer[void]) ) is native(LIB) is export {*};
 
 
 #`[ These allow you to synchronise variable updates from your main program to any
@@ -332,7 +351,10 @@ sub piThreadCreate ( &callback(Pointer[void] --> Pointer[void]) ) is native(LIB)
     – so the data you end up copying is incomplete, or invalid. See the wfi.c
     program in the examples directory for an example.]
 
-sub piLock (int32 keyNum) is native(LIB) is export {*};
-sub piUnlock (int32 keyNum) is native(LIB) is export {*};
+    #sub piLock (int32 keyNum) is native(LIB) is export {*};
+sub piLock (int32 ) is native(LIB) is export {*};
+
+#sub piUnlock (int32 keyNum) is native(LIB) is export {*};
+sub piUnlock (int32 ) is native(LIB) is export {*};
 
 # Concurrent Processing (multi-threading) --------------------------------------
