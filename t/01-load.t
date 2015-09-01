@@ -4,6 +4,8 @@ use Test;
 
 plan 1;
 
-use RPI::Wirint::PI;
+use RPI::Wiring::Pi;
 
-ok 1, "'use RPI::Wirint::PI' worked!";
+ok 1, "'use RPI::Wiring::Pi' worked!";
+
+done;
