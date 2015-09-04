@@ -5,7 +5,7 @@ unit module RPI::Wiring::Pi;
 use strict;
 use NativeCall;
 
-constant LIB = 'libwiringPi.so.2.25';
+constant LIB = 'libwiringPi.so';
 
 #`[ These functions work directly on the Raspberry Pi and also with external GPIO
   modules such as GPIO expanders and so on, although not all modules support all
