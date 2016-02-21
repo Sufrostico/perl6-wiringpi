@@ -1,11 +1,7 @@
-use v6;
+use v6.c;
 
 use Test;
 
-plan 1;
+use-ok('RPI::Wiring::Pi', 'Can load "RPI::Wiring::Pi" ok');
 
-use RPI::Wiring::Pi;
-
-ok 1, "'use RPI::Wiring::Pi' worked!";
-
-done;
+done-testing;
