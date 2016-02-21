@@ -1,10 +1,14 @@
 {
-	"name"        : "wiringPI",
-	"version"     : "2.25.0",
-	"description" : "Perl 6 wrapper to the WiringPI, a wiring based Raspberry Pi library",
-	"depends"     : [ ],
-	"provides"    : {
-		"RPI::Wiring::Pi"	    : "lib/RPI/Wiring/Pi.pm6"
-	},
-	"source-url"  : "git://github.com/sufrostico/perl6-wiringpi.git"
+    "name"        : "wiringPI",
+    "version"     : "2.25.0"
+    "authors"     : [ "Aurelio Sanabria (Sufrostico) <sufrostico at gmail dot com>" ],
+    "description" : "Perl 6 wrapper to the WiringPI, a wiring based Raspberry Pi library",
+    "depends"     : [ ],
+    "test-depends" : [ "Test" ],
+
+    "provides"    : {
+        "RPI::Wiring::Pi"        : "lib/RPI/Wiring/Pi.pm6"
+    },
+
+    "source-url"  : "git://github.com/sufrostico/perl6-wiringpi.git"
 }
