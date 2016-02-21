@@ -1,4 +1,4 @@
-# Perl6 - WiringPI
+# Perl6 - WiringPI [![Build Status](https://secure.travis-ci.org/sufrostico/perl6-wiringpi.svg?branch=master)](http://travis-ci.org/sufrostico/perl6-wiringpi) 
 
 Perl6 Wrapper for the WiringPi C library (to use with the raspberry pi).
 
