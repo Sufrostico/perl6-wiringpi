@@ -12,68 +12,68 @@ constant COLOR_BLACK is export = 0;
 # Handy defines
 
 # Deprecated
-constant NUM_PINS is export = 17
+constant NUM_PINS is export = 17;
 
-constant WPI_MODE_PINS is export =  0
-constant WPI_MODE_GPIO is export =  1
-constant WPI_MODE_GPIO_SYS is export =  2
-constant WPI_MODE_PHYS is export =  3
-constant WPI_MODE_PIFACE is export =  4
-constant WPI_MODE_UNINITIALISED is export = -1
+constant WPI_MODE_PINS is export =  0;
+constant WPI_MODE_GPIO is export =  1;
+constant WPI_MODE_GPIO_SYS is export =  2;
+constant WPI_MODE_PHYS is export =  3;
+constant WPI_MODE_PIFACE is export =  4;
+constant WPI_MODE_UNINITIALISED is export = -1;
 
 # Pin modes
 
-constant INPUT is export =  0
-constant OUTPUT is export =  1
-constant PWM_OUTPUT is export =  2
-constant GPIO_CLOCK is export =  3
-constant SOFT_PWM_OUTPUT is export =  4
-constant SOFT_TONE_OUTPUT is export =  5
-constant PWM_TONE_OUTPUT is export =  6
+constant INPUT is export =  0;
+constant OUTPUT is export =  1;
+constant PWM_OUTPUT is export =  2;
+constant GPIO_CLOCK is export =  3;
+constant SOFT_PWM_OUTPUT is export =  4;
+constant SOFT_TONE_OUTPUT is export =  5;
+constant PWM_TONE_OUTPUT is export =  6;
 
-constant LOW is export =  0
-constant HIGH is export =  1
+constant LOW is export =  0;
+constant HIGH is export =  1;
 
 # Pull up/down/none
 
-constant PUD_OFF is export =  0
-constant PUD_DOWN is export =  1
-constant PUD_UP is export =  2
+constant PUD_OFF is export =  0;
+constant PUD_DOWN is export =  1;
+constant PUD_UP is export =  2;
 
 # PWM
 
-constant PWM_MODE_MS is export = 0
-constant PWM_MODE_BAL is export = 1
+constant PWM_MODE_MS is export = 0;
+constant PWM_MODE_BAL is export = 1;
 
 # Interrupt levels
 
-constant INT_EDGE_SETUP is export = 0
-constant INT_EDGE_FALLING is export = 1
-constant INT_EDGE_RISING is export = 2
-constant INT_EDGE_BOTH is export = 3
+constant INT_EDGE_SETUP is export = 0;
+constant INT_EDGE_FALLING is export = 1;
+constant INT_EDGE_RISING is export = 2;
+constant INT_EDGE_BOTH is export = 3;
 
 # Pi model types and version numbers is Intended for the GPIO program.
 # Use at your own risk.
 
-constant PI_MODEL_UNKNOWN is export = 0
-constant PI_MODEL_A is export = 1
-constant PI_MODEL_B is export = 2
-constant PI_MODEL_BP is export = 3
-constant PI_MODEL_CM is export = 4
-constant PI_MODEL_AP is export = 5
-constant PI_MODEL_2 is export = 6
+constant PI_MODEL_UNKNOWN is export = 0;
+constant PI_MODEL_A is export = 1;
+constant PI_MODEL_B is export = 2;
+constant PI_MODEL_BP is export = 3;
+constant PI_MODEL_CM is export = 4;
+constant PI_MODEL_AP is export = 5;
+constant PI_MODEL_2 is export = 6;
 
-constant PI_VERSION_UNKNOWN is export = 0
-constant PI_VERSION_1 is export = 1
-constant PI_VERSION_1_1 is export = 2
-constant PI_VERSION_1_2 is export = 3
-constant PI_VERSION_2 is export = 4
+constant PI_VERSION_UNKNOWN is export = 0;
+constant PI_VERSION_1 is export = 1;
+constant PI_VERSION_1_1 is export = 2;
+constant PI_VERSION_1_2 is export = 3;
+constant PI_VERSION_2 is export = 4;
 
-constant PI_MAKER_UNKNOWN is export = 0
-constant PI_MAKER_EGOMAN is export = 1
-constant PI_MAKER_SONY is export = 2
-constant PI_MAKER_QISDA is export = 3
-constant PI_MAKER_MBEST is export = 4
+constant PI_MAKER_UNKNOWN is export = 0;
+constant PI_MAKER_EGOMAN is export = 1;
+constant PI_MAKER_SONY is export = 2;
+constant PI_MAKER_QISDA is export = 3;
+constant PI_MAKER_MBEST is export = 4;
 
 
 #`[ These functions work directly on the Raspberry Pi and also with external GPIO
