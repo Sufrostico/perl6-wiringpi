@@ -10,6 +10,18 @@ From the [WiringPI site](http://wiringpi.com):
 
 ## Installation
 
+ 1. This module requires the wiringpi library to installed manually following
+    [this guide](http://wiringpi.com/download-and-install/)
+
+ 1. Install this module by using panda
+
+## Current status
+
+ - Only the main functions of the library has been mapped using the NativeCall
+   library.
+ - The files needed for the other parts of the library are already created and
+   present in the **next** branch but I'm unable to testit due to hardware/time
+   constraints.
 
 ## Testing
 
