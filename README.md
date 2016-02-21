@@ -15,6 +15,12 @@ From the [WiringPI site](http://wiringpi.com):
 
  1. Install this module by using panda
 
+    - From sources:
+        ```
+            panda install .
+        ```
+
+
 ## Current status
 
  - Only the main functions of the library has been mapped using the NativeCall
