@@ -1,6 +1,6 @@
 use v6;
 
-unit module RPI::Wiring::Pi;
+unit module RPi::Wiring::Pi;
 
 use strict;
 use NativeCall;

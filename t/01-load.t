@@ -2,6 +2,6 @@ use v6.c;
 
 use Test;
 
-use-ok('RPI::Wiring::Pi', 'Can load "RPI::Wiring::Pi" ok');
+use-ok('RPi::Wiring::Pi', 'Can load "RPi::Wiring::Pi" ok');
 
 done-testing;
