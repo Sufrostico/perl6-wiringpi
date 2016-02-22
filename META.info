@@ -1,6 +1,6 @@
 {
     "name"        : "wiringPI",
-    "version"     : "2.25.0"
+    "version"     : "2.25.0",
     "authors"     : [ "Aurelio Sanabria (Sufrostico) <sufrostico at gmail dot com>" ],
     "description" : "Perl 6 wrapper to the WiringPI, a wiring based Raspberry Pi library",
     "depends"     : [ ],
