@@ -1,13 +1,13 @@
 use v6;
 
-unit module RPI::Wiring::Serial;
+unit module RPi::Wiring::Serial;
 
 use strict;
 use warnings;
 use NativeCall;
 use Carp qw(carp croak verbose);
 
-constant LIB = 'libwiringPi.so.2.25';
+constant LIB = 'libwiringPi.so';
 
 # Setup funcions -------------------------------------------------------------
 

@@ -1,13 +1,13 @@
 use v6;
 
-unit module RPI::Wiring::SoftTone;
+unit module RPi::Wiring::SoftTone;
 
 use strict;
 use warnings;
 use NativeCall;
 use Carp qw(carp croak verbose);
 
-constant LIB = 'libwiringPi.so.2.25';
+constant LIB = 'libwiringPi.so';
 
 #`[ WiringPi includes a software-driven sound handler capable of outputting a simple
     tone/square wave signal on any of the Raspberry Pi’s GPIO pins.

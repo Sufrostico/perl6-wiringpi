@@ -1,13 +1,13 @@
 use v6;
 
-unit module RPI::Wiring::Shift;
+unit module RPi::Wiring::Shift;
 
 use strict;
 use warnings;
 use NativeCall;
 use Carp qw(carp croak verbose);
 
-constant LIB = 'libwiringPi.so.2.25';
+constant LIB = 'libwiringPi.so';
 
 # Shift Library ----------------------------------------------------------------
 
