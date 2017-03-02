@@ -2,10 +2,7 @@ use v6;
 
 unit module RPi::Wiring::SPI;
 
-use strict;
-use warnings;
 use NativeCall;
-use Carp qw(carp croak verbose);
 
 constant LIB = 'libwiringPi.so';
 
@@ -45,7 +42,7 @@ constant LIB = 'libwiringPi.so';
     The returned value is the Linux file-descriptor for the device, or -1 on error.
     If an error has happened, you may use the standard errno global variable to see
     why.  ]
-sub wiringPiSPISetup (int32 channel, int32 speed) returns int32 is native(LIB) is export {*};
+sub wiringPiSPISetup (int32 $channel, int32 $speed) returns int32 is native(LIB) is export {*};
 
 
 #`[ This performs a simultaneous write/read transaction over the selected SPI bus.
@@ -57,5 +54,5 @@ sub wiringPiSPISetup (int32 channel, int32 speed) returns int32 is native(LIB) i
     registers, or those LED strings where you send RGB triplets of data. Devices
     such as A/D and D/A converters usually need to perform a concurrent write/read
     transaction to work.  ]
-sub wiringPiSPIDataRW (int32 channel, Str data, int32 len) returns int32 is native(LIB) is export {*};
+sub wiringPiSPIDataRW (int32 $channel, CArray[uint8] $data, int32 $len) returns int32 is native(LIB) is export {*};
 

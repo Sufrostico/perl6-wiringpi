@@ -2,7 +2,6 @@ use v6;
 
 unit module RPi::Wiring::Pi;
 
-use strict;
 use NativeCall;
 
 constant LIB = 'libwiringPi.so';
