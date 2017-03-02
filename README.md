@@ -25,9 +25,8 @@ From the [WiringPI site](http://wiringpi.com):
 
  - Only the main functions of the library has been mapped using the NativeCall
    library.
- - The files needed for the other parts of the library are already created and
-   present in the **next** branch but I'm unable to testit due to hardware/time
-   constraints.
+ - SPI is works.
+ - I2C, Serial, Shift and SoftTone are there but untested.
 
 ## Testing
 
@@ -44,3 +43,4 @@ Aurelio Sanabria, sufrostico on #perl6 and github (https://github.com/sufrostico
 ## License
 
 GPL - General Public License
+
