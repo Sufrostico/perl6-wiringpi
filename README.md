@@ -13,13 +13,12 @@ From the [WiringPI site](http://wiringpi.com):
  1. This module requires the wiringpi library to installed manually following
     [this guide](http://wiringpi.com/download-and-install/)
 
- 1. Install this module by using panda
+ 1. Installation using zef
 
     - From sources:
         ```
-            panda install .
+            zef install .
         ```
-
 
 ## Current status
 
