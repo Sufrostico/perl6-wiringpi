@@ -22,8 +22,8 @@ From the [WiringPI site](http://wiringpi.com):
 
 ## Current status
 
- - Only the main functions of the library has been mapped using the NativeCall
-   library.
+ - Tested with WiringPi version 2.3.9.
+ - Only the main functions of the library have been mapped using NativeCall.
  - SPI is works.
  - I2C, Serial, Shift and SoftTone are there but untested.
 
